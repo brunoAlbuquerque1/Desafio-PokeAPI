@@ -1,4 +1,5 @@
 import React from "react";
+import ListPokemon from "../../components/ListPokemon/listPokemon";
 
 const Home = () => {
   return (
@@ -6,7 +7,7 @@ const Home = () => {
       data-testid="home-page"
       style={{ position: "relative", width: "100%" }}
     >
-      <h1>Home</h1>
+      <ListPokemon />
     </div>
   );
 };
