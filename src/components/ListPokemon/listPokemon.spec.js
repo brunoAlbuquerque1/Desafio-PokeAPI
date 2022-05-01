@@ -26,7 +26,7 @@ describe("List Pokemon component tests", () => {
     });
   });
 
-  it("deve renderizar a próxima página e a página anterior", async () => {
+  it("should render the next page and the previous page", async () => {
     render(<ListPokemon />);
     expect(screen.getByText("1")).toBeInTheDocument();
 

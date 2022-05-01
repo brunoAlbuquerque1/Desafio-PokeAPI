@@ -4,12 +4,14 @@ import CardPokemon from "../CardPokemon/cardPokemon";
 import { Container, List } from "./styles";
 import Loading from "../Loading/loading";
 import Pagination from "../Pagination/pagination";
+import SeachBar from "../SearchBar/searchBar";
 
-const ListPokemon = ({ search }) => {
+const ListPokemon = () => {
   const [pokemons, setPokemons] = useState(null);
   const [limit, setLimit] = useState(20);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     getPokemons();
@@ -41,9 +43,17 @@ const ListPokemon = ({ search }) => {
     const nextPage = Math.min(page + 1);
     setPage(nextPage);
   }
+  const s = search && search.toLowerCase();
+  const filtered =
+    !pokemons || !s
+      ? pokemons
+      : pokemons.filter((element) =>
+          element.data?.name.toLowerCase().includes(s)
+        );
 
   return (
     <Container data-testid="resolved">
+      <SeachBar search={search} onChange={(ev) => setSearch(ev.target.value)} />
       <Pagination
         page={page}
         nextPage={() => {
@@ -57,12 +67,12 @@ const ListPokemon = ({ search }) => {
         {loading ? (
           <Loading />
         ) : (
-          pokemons?.map((item) => (
+          filtered &&
+          filtered.map((item) => (
             <CardPokemon
               data-testid="card_pokemon"
               key={item.id}
               name={item.data.name}
-              // pokemon={item.data}
               img={item.data.sprites.front_default}
             />
           ))
