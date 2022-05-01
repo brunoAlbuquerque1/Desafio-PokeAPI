@@ -59,7 +59,7 @@ const ListPokemon = ({ search }) => {
         ) : (
           pokemons?.map((item) => (
             <CardPokemon
-              data-testid="resolved"
+              data-testid="card_pokemon"
               key={item.id}
               name={item.data.name}
               // pokemon={item.data}

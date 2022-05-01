@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import CardPokemon from "./cardPokemon";
 
 describe("CardPokemon component tests", () => {
-  test("should render is name , img component", () => {
+  it("should render is name , img component", () => {
     render(
       <CardPokemon
         name={"pokemon name"}

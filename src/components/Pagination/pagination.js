@@ -4,7 +4,7 @@ const Pagination = ({ prevPage, nextPage, page }) => {
   return (
     <S.Container>
       {page !== 0 && (
-        <S.BtnPrev onClick={prevPage}>
+        <S.BtnPrev data-testid="prevButton_component" onClick={prevPage}>
           <S.Text>Anterior</S.Text>
           <S.PrevICon />
         </S.BtnPrev>

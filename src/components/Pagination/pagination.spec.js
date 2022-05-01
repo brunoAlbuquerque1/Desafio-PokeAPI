@@ -4,14 +4,13 @@ import Pagination from "./pagination";
 
 describe("<Pagination />", () => {
   it("should render logo", () => {
-    render(<Pagination page="0" />);
+    render(<Pagination />);
   });
 
   it("should render the  page when you click the button", () => {
-    render(<Pagination page="0" />);
+    render(<Pagination />);
     const nexButton = screen.getByText("Proximo");
     userEvent.click(nexButton);
-    screen.debug();
     const prevBtton = screen.getByText("Anterior");
     userEvent.click(prevBtton);
   });
