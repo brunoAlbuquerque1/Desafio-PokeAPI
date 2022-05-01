@@ -3,6 +3,7 @@ import api from "../../service/api";
 import CardPokemon from "../CardPokemon/cardPokemon";
 import { Container, List } from "./styles";
 import Loading from "../Loading/loading";
+import Pagination from "../Pagination/pagination";
 
 const ListPokemon = ({ search }) => {
   const [pokemons, setPokemons] = useState(null);
@@ -31,8 +32,27 @@ const ListPokemon = ({ search }) => {
     } catch (err) {}
   }
 
+  function lastPage() {
+    const nextPage = Math.max(page - 1, 0);
+    setPage(nextPage);
+  }
+
+  function nextPage() {
+    const nextPage = Math.min(page + 1);
+    setPage(nextPage);
+  }
+
   return (
     <Container data-testid="resolved">
+      <Pagination
+        page={page}
+        nextPage={() => {
+          nextPage();
+        }}
+        prevPage={() => {
+          lastPage();
+        }}
+      />
       <List>
         {loading ? (
           <Loading />
