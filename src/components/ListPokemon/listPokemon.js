@@ -71,7 +71,7 @@ const ListPokemon = () => {
           filtered.map((item) => (
             <CardPokemon
               data-testid="card_pokemon"
-              key={item.id}
+              key={item.data.id}
               id={item.data.id}
               name={item.data.name}
               img={item.data.sprites.front_default}

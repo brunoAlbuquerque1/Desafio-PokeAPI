@@ -12,11 +12,16 @@ export const TextFavorites = styled.p`
 export const ViewText = styled(Link)`
   display: flex;
   margin-top: 30px;
+  padding: 10px;
+
   text-decoration: none;
+  border-width: 1px;
+  border-color: #fff;
+  border-style: solid;
+  border-radius: 10px;
 `;
 
 export const NumberFavorites = styled.p`
-  margin-left: 10px;
   cursor: pointer;
   color: #f7c307;
   font-size: 16px;

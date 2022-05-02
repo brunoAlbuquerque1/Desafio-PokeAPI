@@ -1,16 +1,17 @@
 import React from "react";
 import * as S from "./styles";
+import { useFavorite } from "../../../hooks/Favorites/FavoritesHook";
 
 const Favorites = () => {
+  const { pokemonFavorited } = useFavorite();
+
   return (
-    <div>
-      <S.ViewText data-testid="link-favorites" to="/favorites">
-        <div>
-          <S.TextFavorites>Favoritos</S.TextFavorites>
-          <S.NumberFavorites>0</S.NumberFavorites>
-        </div>
-      </S.ViewText>
-    </div>
+    <S.ViewText data-testid="link-favorites" to="/favorites">
+      <div>
+        <S.TextFavorites>Favoritos</S.TextFavorites>
+        <S.NumberFavorites>{pokemonFavorited.length}</S.NumberFavorites>
+      </div>
+    </S.ViewText>
   );
 };
 

@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/home";
+import Favorites from "../pages/Favorites/favoritePage";
 import DefautLayout from "../components/DefaultLayout/defaultLayout";
 
 function AppRoutes() {
@@ -8,6 +9,7 @@ function AppRoutes() {
       <DefautLayout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </DefautLayout>
     </BrowserRouter>
