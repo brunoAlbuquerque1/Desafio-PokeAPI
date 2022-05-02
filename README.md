@@ -1,6 +1,6 @@
 # Teste PokeApi React
 
- 
+- --COMMITES FORAM FEITOS SEGUINDO Conventional Commits  ---
 - --FICO TE DEVENDO O MODAL---
 - --FOI QUASE 100%---
 
