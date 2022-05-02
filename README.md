@@ -1,5 +1,7 @@
- Teste PokeApi React
+# Teste PokeApi React
+
  
- ---FICO DEVENDO O MODAL---
+---FICO DEVENDO O MODAL---
+---FOI QUASE 100%---
  
  
