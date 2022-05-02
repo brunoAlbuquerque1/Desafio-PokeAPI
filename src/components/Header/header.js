@@ -1,5 +1,5 @@
 import React from "react";
-import Favorites from "./Favorites";
+// import Favorites from "./Favorites";
 import Logo from "../Logo/logo";
 import * as S from "./styles";
 
@@ -8,7 +8,7 @@ const Header = () => {
     <S.Container>
       <S.InnerContainer>
         <Logo />
-        <Favorites />
+        {/* <Favorites /> */}
       </S.InnerContainer>
     </S.Container>
   );

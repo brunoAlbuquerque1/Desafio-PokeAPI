@@ -72,6 +72,7 @@ const ListPokemon = () => {
             <CardPokemon
               data-testid="card_pokemon"
               key={item.id}
+              id={item.data.id}
               name={item.data.name}
               img={item.data.sprites.front_default}
             />

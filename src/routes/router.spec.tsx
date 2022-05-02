@@ -1,5 +1,5 @@
 import React from "react";
-import AppRoutes from ".";
+import AppRoutes from "../routes/index";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 
