@@ -30,8 +30,9 @@ export const TextOff = styled.p`
   }
 `;
 
-export const ViewImage = styled.div`
+export const ViewImage = styled(Link)`
   display: flex;
+  cursor: pointer;
 `;
 
 export const Image = styled.img`
