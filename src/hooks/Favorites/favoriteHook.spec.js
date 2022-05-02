@@ -6,8 +6,8 @@ import {
   useFavorite,
 } from "../../hooks/Favorites/FavoritesHook";
 
-describe("Teste do hook Cart", () => {
-  test("add pokemon in provicer", async () => {
+describe("Test hook pokemon", () => {
+  test("add pokemon in provider", async () => {
     const { result } = renderHook(() => useFavorite(), {
       wrapper: FavoriteProvider,
     });

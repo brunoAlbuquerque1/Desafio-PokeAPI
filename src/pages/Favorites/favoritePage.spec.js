@@ -9,8 +9,8 @@ const mockPokemon = {
   image: "image",
 };
 
-describe("Cart page component tests", () => {
-  test("renders without items on cart", async () => {
+describe("pokemon page component tests", () => {
+  test("renders without items on pokemon", async () => {
     jest.spyOn(hookFavorite, "useFavorite").mockReturnValue({
       pokemonFavorited: [],
       addFavorite: jest.fn(),
@@ -22,7 +22,7 @@ describe("Cart page component tests", () => {
     expect(screen.getByTestId("empty_pokemon_favorite")).toBeInTheDocument();
   });
 
-  test("renders with items on cart", () => {
+  test("renders with items on pokemon", () => {
     jest.spyOn(hookFavorite, "useFavorite").mockReturnValue({
       pokemonFavorited: [{ ...mockPokemon }],
       addFavorite: jest.fn(),
@@ -31,24 +31,8 @@ describe("Cart page component tests", () => {
 
     render(<Favorite />);
 
-    const itemOnCart = screen.getByText("pokemon name");
+    const itemOnpokemon = screen.getByText("pokemon name");
 
-    expect(itemOnCart).toBeInTheDocument();
+    expect(itemOnpokemon).toBeInTheDocument();
   });
-
-  //   test("remove item to cart", async () => {
-  //     jest.spyOn(hookFavorite, "useFavorite").mockReturnValue({
-  //       products: [{ ...mockPokemon }],
-  //       getTotalPrice: 20,
-  //       addFavorite: jest.fn(),
-  //       Removefavorite: mockPokemon,
-  //     });
-
-  //     const { getByTestId } = render(<Cart />);
-
-  //     const itemToBeRemoved = getByTestId("remove_item_cart");
-  //     userEvent.click(itemToBeRemoved);
-
-  //     expect(mockPokemon).toBeCalledTimes(1);
-  //   });
 });

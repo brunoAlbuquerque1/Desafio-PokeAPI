@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, renderHook } from "@testing-library/react";
 import CardPokemon from "./cardPokemon";
-import * as hookCart from "../../hooks/Favorites/FavoritesHook";
+import * as hookFavorite from "../../hooks/Favorites/FavoritesHook";
 import { BrowserRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 
@@ -31,11 +31,11 @@ describe("CardPokemon component tests", () => {
       image: "image",
     };
 
-    const mockAddToCart = jest.fn();
+    const mockAddToFavorite = jest.fn();
 
-    jest.spyOn(hookCart, "useFavorite").mockReturnValue({
+    jest.spyOn(hookFavorite, "useFavorite").mockReturnValue({
       products: [{ ...mockPokemon }],
-      addFavorite: mockAddToCart,
+      addFavorite: mockAddToFavorite,
       Removefavorite: jest.fn(),
     });
 
@@ -46,6 +46,6 @@ describe("CardPokemon component tests", () => {
     const buyButton = screen.getByTestId("button_favorite");
     userEvent.click(buyButton);
 
-    expect(mockAddToCart).toBeCalledTimes(1);
+    expect(mockAddToFavorite).toBeCalledTimes(1);
   });
 });
