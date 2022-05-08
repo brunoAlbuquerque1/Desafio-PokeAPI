@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import * as S from "./styles";
 
 const Stats = ({ item }) => {
-  const stats = item?.stats.map((e) => {
+  const stats = item?.stats.map((e, index) => {
     return (
-      <div style={{ flexDirection: "row", display: "flex" }}>
+      <div key={index} style={{ flexDirection: "row", display: "flex" }}>
         <div>
           <S.Infos>{e.base_stat}</S.Infos>
         </div>

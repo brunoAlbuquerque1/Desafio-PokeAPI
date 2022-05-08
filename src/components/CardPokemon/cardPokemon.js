@@ -7,6 +7,8 @@ import {
   FavoriteICon,
   NotFavoriteICon,
   ViewFavorite,
+  ButtonDetails,
+  TextDetails,
 } from "./styles";
 
 const CardPokemon = (pokemon) => {
@@ -14,7 +16,7 @@ const CardPokemon = (pokemon) => {
   const favorited = pokemonFavorited?.find((e) => pokemon.id === e.id);
 
   return (
-    <Container onClick={pokemon.onClickViewPokemon}>
+    <Container>
       <ViewFavorite
         data-testid="button_favorite"
         onClick={() => {
@@ -35,6 +37,10 @@ const CardPokemon = (pokemon) => {
       <ProductDescription>
         <h4>{pokemon.name}</h4>
       </ProductDescription>
+
+      <ButtonDetails onClick={pokemon.onClickViewPokemon}>
+        <TextDetails>Ver Detalhes</TextDetails>
+      </ButtonDetails>
     </Container>
   );
 };

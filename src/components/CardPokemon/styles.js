@@ -69,5 +69,20 @@ export const FavoriteICon = styled(HeartFill)`
 export const ViewFavorite = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 10px 10px 0 0;
+  margin: 10px;
+`;
+
+export const ButtonDetails = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #f7c307;
+  border-radius: 20px;
+  margin: 20px;
+`;
+
+export const TextDetails = styled.p`
+  font-weight: bold;
+  font-size: 16px;
 `;
