@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./styles";
-import { useFavorite } from "../../../hooks/Favorites/FavoritesHook";
+import { useFavorite } from "../../../hooks/useFavorite/useFavorite";
 
 const Favorites = () => {
   const { pokemonFavorited } = useFavorite();

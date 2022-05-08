@@ -1,6 +1,6 @@
 import React from "react";
 import AppRoutes from "./routes/index";
-import { FavoriteProvider } from "./hooks/Favorites/FavoritesHook";
+import { FavoriteProvider } from "./Context/Favorite/contextFavorite";
 import GlobalStyled from "./styles/GlobalStyled";
 
 function App() {

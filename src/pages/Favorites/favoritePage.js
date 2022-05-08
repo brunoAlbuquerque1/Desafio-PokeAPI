@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CardPokemon from "../../components/CardPokemon/cardPokemon";
 import * as S from "./styles";
-import { useFavorite } from "../../hooks/Favorites/FavoritesHook";
+import { useFavorite } from "../../hooks/useFavorite/useFavorite";
 
 export default function Favorite() {
   const { pokemonFavorited } = useFavorite();

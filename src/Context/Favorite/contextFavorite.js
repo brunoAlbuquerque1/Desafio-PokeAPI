@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useCallback, useState } from "react";
-
-const FavoriteContext = createContext({
+import React, { useCallback, useState } from "react";
+import { createContext } from "use-context-selector";
+export const FavoriteContext = createContext({
   pokemonFavorited: [],
   addFavorite: (item) => null,
   Removefavorite: (item) => null,
@@ -55,11 +55,4 @@ const FavoriteProvider = ({ children }) => {
   );
 };
 
-function useFavorite() {
-  const context = useContext(FavoriteContext);
-
-  if (!context) return console.log("err");
-  return context;
-}
-
-export { FavoriteProvider, useFavorite };
+export { FavoriteProvider };

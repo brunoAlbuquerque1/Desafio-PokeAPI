@@ -1,10 +1,9 @@
 import { waitFor, act } from "@testing-library/react";
 import { renderHook } from "@testing-library/react";
 
-import {
-  FavoriteProvider,
-  useFavorite,
-} from "../../hooks/Favorites/FavoritesHook";
+import { FavoriteProvider } from "../Favorite/contextFavorite";
+
+import { useFavorite } from "../../hooks/useFavorite/useFavorite";
 
 describe("Test hook pokemon", () => {
   test("add pokemon in provider", async () => {

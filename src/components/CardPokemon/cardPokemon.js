@@ -1,5 +1,5 @@
-import React from "react";
-import { useFavorite } from "../../hooks/Favorites/FavoritesHook";
+import React, { memo } from "react";
+import { useFavorite } from "../../hooks/useFavorite/useFavorite";
 
 import {
   Container,
@@ -14,7 +14,7 @@ const CardPokemon = (pokemon) => {
   const favorited = pokemonFavorited?.find((e) => pokemon.id === e.id);
 
   return (
-    <Container>
+    <Container onClick={pokemon.onClickViewPokemon}>
       <ViewFavorite
         data-testid="button_favorite"
         onClick={() => {
@@ -39,4 +39,4 @@ const CardPokemon = (pokemon) => {
   );
 };
 
-export default CardPokemon;
+export default memo(CardPokemon);

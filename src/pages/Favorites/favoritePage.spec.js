@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import * as hookFavorite from "../../hooks/Favorites/FavoritesHook";
+import * as hookFavorite from "../../hooks/useFavorite/useFavorite";
 import Favorite from "./favoritePage";
 
 const mockPokemon = {

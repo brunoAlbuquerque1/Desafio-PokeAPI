@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, renderHook } from "@testing-library/react";
 import CardPokemon from "./cardPokemon";
-import * as hookFavorite from "../../hooks/Favorites/FavoritesHook";
+import * as hookFavorite from "../../hooks/useFavorite/useFavorite";
 import { BrowserRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 
