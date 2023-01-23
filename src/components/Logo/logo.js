@@ -11,7 +11,7 @@ const Logo = () => {
         />
       </S.ViewImage>
       <S.ViewText>
-        <S.TextOff>Teste Ambev, PokemonAPi</S.TextOff>
+        <S.TextOff> PokemonAPi</S.TextOff>
       </S.ViewText>
     </>
   );
