@@ -2,5 +2,5 @@
 
 ## New Features Future 
 
-[ ] - TypeScript
-[ ] - Implementation ReactQuery 
+- [ ]  TypeScript
+- [ ] Implementation ReactQuery 
